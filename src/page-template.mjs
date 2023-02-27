@@ -1,5 +1,5 @@
 // creates the team
-const generateTeam = team => {
+export const generateTeam = team => {
 
     // creates the manager html
     const generateManager = manager => {
@@ -78,6 +78,8 @@ const generateTeam = team => {
     return html.join("");
 
 }
+
+export { generateEngineer };
 
 // exports function to generate entire page
 module.exports = team => {

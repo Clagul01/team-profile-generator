@@ -1,4 +1,4 @@
-const Employee = require('./employee');
+import { Employee } from "./employee.mjs";
 
 class Manager extends Employee {
     constructor(officeNumber){
@@ -8,3 +8,5 @@ class Manager extends Employee {
         return 'Manager';
     }
 }
+
+export { Manager };

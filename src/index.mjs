@@ -1,9 +1,12 @@
 import inquirer from 'inquirer';
-const Engineer = require('./engineer.mjs');
+import Engineer from './engineer.mjs';
+import Intern from './intern.mjs';
 
 const managerData = [];
 const engineerData = [];
 const internData = [];
+const engFunc = Engineer;
+const intFunc = Intern;
 
 async function welcome() {
 const firstInquiry =
@@ -31,7 +34,7 @@ const firstInquiry =
   ])
   .then(function(answers) {
     managerData.push(answers);
-    selectMenu();
+    console.log(managerData);
   });
 };
 
@@ -124,7 +127,7 @@ export { managerData };
 export { engineerData };
 export { internData };
 
-console.log(managerData):
+
 
 welcome();
 

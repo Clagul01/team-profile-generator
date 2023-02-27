@@ -1,13 +1,16 @@
-const Employee = require('./employee');
+import { Employee } from './employee.mjs';
 
-class Intern extends Employee {
-    constructor(school) {
+export default class Intern extends Employee {
+    constructor(name, id, email, school) {
+        super(name, id, email);
         this.school = school;
     }
     getSchool() {
-
+        return this.school;
     }
     getRole() {
         return 'Intern';
     }
 }
+
+export { Intern };
